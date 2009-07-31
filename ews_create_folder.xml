@@ -2,15 +2,17 @@
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
       xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
   <soap:Body>
-    <CreateFolder xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <CreateFolder 
+       xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
       <ParentFolderId>
-        <t:DistinguishedFolderId Id="msgfolderroot"/>
+        <t:DistinguishedFolderId Id="inbox"/>
       </ParentFolderId>
       <Folders>
         <t:Folder>
           <t:DisplayName>{0}</t:DisplayName>
 	  <t:ExtendedProperty>
-	    <t:ExtendedFieldURI t:PropertyTag="x36DF" t:PropertyType="Binary" />
+	    <t:ExtendedFieldURI t:PropertyTag="x36DF" 
+				t:PropertyType="Binary" />
 	    <t:Value>{1}</t:Value>
 	  </t:ExtendedProperty>
         </t:Folder>
